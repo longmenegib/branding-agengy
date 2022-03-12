@@ -1,0 +1,56 @@
+.slidetitle{
+    font-size: 56px;
+    font-family: 'Titan One', cursive;
+}
+.slidetext{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* padding: 20px 0px 20px 0px; */
+    font-weight: 600;
+    width: 80%;
+}
+.subtitle{
+    color: #198bff;
+    /* color: #ffd600; */
+    font-size: 46px;
+}
+.service-card{
+    background-color: #198bff !important;
+    color: white;
+    height: 280px;
+}
+
+.service-card:hover{
+    background-color: #ffd600 !important;
+    cursor: pointer;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pricing-title{
+    font-size: xx-large;
+    margin-top: -15px;
+    color: black;
+    font-weight: 700;
+}
+
+.pricing-small-title{
+    font-family: 'Titan One', cursive;
+    color: #198bff;
+}
+.pricing-card{
+    /* height: 400px; */
+    display: block;
+}
+.pricing{
+    /* align-self: flex-start; */
+    display: block !important;
+    width: 100%;
+}
+.fonttrivia{
+    font-size: 36px;
+    font-family: 'Titan One', cursive;
+}
