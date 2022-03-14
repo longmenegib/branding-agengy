@@ -7,11 +7,12 @@ import illus from '../assets/illustration.png'
 export default function ContactLayout() {
   return (
     <div style={{marginTop: '0px'}}>
-        <Container  className="" style={{paddingTop: '100px'}}>
+        <Container  className="" style={{paddingTop: '50px'}}>
             <Row>
-                <Col>
-                <div className="" style={{marginBottom: '50px', textAlign: 'center'}}>
-                    <p className="pricing-small-title">
+                <Col className='d-flex'>
+                <div className="d-flex" style={{marginBottom: '50px', textAlign: 'center', width: '100%'}}>
+                    <iframe width={'100%'} height={'100%'} src='https://form.jotform.com/220387506125149'></iframe>
+                    {/* <p className="pricing-small-title">
                         TELL US MORE
                     </p>
                     <p className="pricing-title">
@@ -57,7 +58,7 @@ export default function ContactLayout() {
                             </Col>
                             <Col>
                                 <FormGroup row style={{width: '100%', height: '90%'}}>
-                                    {/* <Col sm={12}> */}
+                                   
                                     <Input
                                         id="exampleText"
                                         name="text"
@@ -65,7 +66,7 @@ export default function ContactLayout() {
                                         style={{width: '100%', height: '100%'}}
                                         placeholder="Your message"
                                     />
-                                    {/* </Col> */}
+                                   
                                 </FormGroup>
                             </Col>
                         </Row>
@@ -75,7 +76,7 @@ export default function ContactLayout() {
                     </p>
                     <Button href="#categories" className="d-flex justify-content-center align-items-center" style={{borderRadius: '10px', backgroundColor: '#198bff', height: '50px', width: '200px'}}>
                         Request a quote
-                    </Button>
+                    </Button> */}
                 </div>
                 </Col>
                 <Col className="illustration" sm={4} md={6}>

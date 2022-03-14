@@ -1,63 +1,108 @@
-import React from 'react'
-import Header from '../components/Headers/Header'
-import {Container, Row, Col, Button} from 'reactstrap'
+import React, { useRef, useEffect }  from 'react'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import Header from '../components/Headers/Header'
 import './css/home.css'
-import illus from '../assets/illustration.png'
 import About from '../layout/About'
 import Services from '../layout/Services'
 import Pricing from '../layout/Pricing'
 import BlogLayout from '../layout/BlogLayout'
 import ContactLayout from '../layout/ContactLayout'
 import Footer from '../components/Footers/Footer'
+import Testimonial from '../layout/TestimonialLayout'
+import SlideLayout from '../layout/SlideLayout'
 
 export default function Home() {
-  return (
-    <div className="bg-gradient-red" style={{height: '100vh', width: '100vw'}}>
-        <Header />
-        <Container className="w-100" style={{paddingTop: '100px'}}>
-            <Row>
-                <Col>
-                    <span className="slidetitle">
-                        CREATE <span style={{ color: '#ffd600'}}>YOUR</span> <span style={{ color: '#198bff'}}>BRAND</span>
-                    </span>
-                    <p className="slidetext">
-                        We specialize in creating personalized designs for all kinds of businesses.
-                        We are ready to bring <span style={{ color: '#ffd600'}}>YOUR</span> <span style={{ color: '#198bff'}}>BRAND </span> 
-                        to life. We don't just <span style={{ color: '#ffd600'}}>CREATE</span> <span style={{ color: '#198bff'}}>DESIGNS</span>. We
-                        <span style={{ color: '#ffd600'}}> BUILD</span> <span style={{ color: '#198bff'}}>DREAMS. LET'S BUILD YOURS!</span>
-                    </p>
-                    <Row style={{width: '300px', alignItems: 'center'}}>
-                        <Col>
-                        <Button href="#categories" className="d-flex align-items-center" style={{borderRadius: '50px', backgroundColor: '#198bff', height: '30px', }}>
-                            Get Started
-                        </Button>
-                        </Col>
-                        <Col>
-                        <div style={{color: '#198bff', fontWeight: 'bold'}}>
-                            Learn more
-                        </div>
-                        </Col>
-                    
-                    </Row>
-                </Col>
-                <Col className="illustration" sm={4} md={6}>
-                    <img src={illus} width="100%" height="100%" alt="" className="home-img"/>  
-                </Col>
-            </Row>
-        </Container>
-        <About />
+    gsap.registerPlugin(ScrollTrigger);
+    const ref = useRef(null);
+    const revealRef = useRef([]);
+    revealRef.current = [];
 
-        <Services />
+    useEffect(() => {
+        const element = ref.current;
+        // gsap.from(element, {
+        //   duration: 1,
+        //   autoAlpha: 0,
+        //   ease: 'none',
+        //   delay: 1
+        // })
 
-        <Pricing />
+        revealRef.current.forEach((el, index)=>{
+          gsap.fromTo(el, {
+            // autoAlpha: 0
+            opacity: 0,
+            y: 60
+          },{
+            duration: 0.5,
+            // autoAlpha: 1,
+            opacity: 1,
+            y: 0,
+            ease: 'none',
+            scrollTrigger:{
+              // id: `section_${index+1}`,
+              trigger: el,
+              start: 'top center+=100',
+              toggleActions: 'play none none reverse',
+              markers: false,
+              // scrub: true
+            }
+          })
+        })
 
-        <BlogLayout />
+      }, []);
 
-        <ContactLayout />
+      const addToRefs = (el) => {
+        if(el && !revealRef.current.includes(el)){
+          revealRef.current.push(el);
+        }
+      }
 
-        <Footer />
-    
-    </div>
-  )
+    return (
+        <div 
+            className="bg-gradient-red" 
+            style={{height: '100vh', width: '100vw'}}
+            ref={ref}
+        >
+            <Header />
+            
+            <div id="section_1" ref={addToRefs}>
+            <SlideLayout />
+            </div>
+            
+
+            <div id="section_2" ref={addToRefs}>
+            <About />
+            </div>
+            
+
+            <div id="section_3" ref={addToRefs}>
+            <Services />
+            </div>
+            
+
+            <div id="section_4" ref={addToRefs}>
+            <Testimonial />
+            </div>
+            
+
+            <div id="section_5" ref={addToRefs}>
+            <Pricing />
+            </div>
+            
+
+            <div id="section_6" ref={addToRefs}>
+            <BlogLayout />
+            </div>
+            
+
+            <div id="section_7" ref={addToRefs}>
+            <ContactLayout />
+            </div>
+            
+
+            <Footer />
+        
+        </div>
+    )
 }

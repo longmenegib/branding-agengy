@@ -7,3 +7,13 @@
 .footer-links{
     margin-top: 50px;
 }
+
+.footer-link li:hover{
+    color: gold;
+    cursor: pointer;
+}
+
+.navlinkk:hover{
+    color: gold !important;
+    cursor: pointer;
+}

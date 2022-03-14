@@ -5,8 +5,8 @@ import illus from '../assets/illustration.png'
 
 export default function About() {
   return (
-    <div className="w-100 m-auto" style={{marginTop: '20px', width: '100%', margin: 'auto'}}>
-        <Container className="" style={{paddingTop: '100px'}}>
+    <div className="w-100 m-auto" style={{marginTop: '0px', width: '100%', margin: 'auto'}}>
+        <Container className="" style={{paddingTop: '70px'}}>
             <Row>
                 <Col>
                     {/* <p className="slidetitle">
@@ -26,7 +26,7 @@ export default function About() {
                        Improving your brand, and increasing your digital footprint <br/>
                     </p>
                     <Button href="#categories" className="d-flex align-items-center justify-content-center mt-5" style={{borderRadius: '50px', 
-                    backgroundColor: '#198bff', height: '30px', width: '200px'}}>
+                    backgroundColor: '#198bff', height: '30px', width: '250px'}}>
                         VIEW YOUR SERVICES
                     </Button>
                 </Col>

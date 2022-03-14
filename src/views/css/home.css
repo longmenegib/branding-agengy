@@ -1,3 +1,7 @@
+/* .navitems{
+    color: gray !important;
+} */
+
 .slidetitle{
     font-size: 56px;
     font-family: 'Titan One', cursive;
@@ -16,7 +20,8 @@
 .service-card{
     background-color: #198bff !important;
     color: white;
-    height: 280px;
+    min-height: 300px;
+    flex: 1;
 }
 
 .service-card:hover{
@@ -53,4 +58,59 @@
 .fonttrivia{
     font-size: 36px;
     font-family: 'Titan One', cursive;
+}
+
+.testimonial-head{
+    font-weight: bold;
+}
+
+.testimonial-title{
+    font-size: x-large;
+    color: #198bff;
+}
+
+.testimonial-image{
+    margin: 50px 0px 20px 0px;
+    border-right: 2px red solid;
+}
+
+.testimonial-author{
+    color: black;
+    font-weight: bold;
+    font-variant-caps: titling-caps;
+    font-size: x-large;
+}
+
+.testimonial-btn{
+    background-color: #198bff;
+    padding: 5px 6px 5px 6px;
+    color: white;
+}
+
+.testimonial-quote{
+    font-size: 48px;
+    font-weight: lighter;
+    color: gray;
+}
+
+.blog-item{
+    border: 1px solid rgba(0,0, 0, 0.1);
+    /* align-self: center; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.testimonial-image-image{
+    border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+    .illustration{
+        display: none;
+    }
+
+    .blog-item{
+        border: 1px solid rgba(0,0, 0, 0.1);
+        align-self: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
 }
