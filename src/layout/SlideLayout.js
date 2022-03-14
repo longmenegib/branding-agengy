@@ -19,7 +19,7 @@ export default function SlideLayout() {
                     </p>
                     <Row style={{width: '300px', alignItems: 'center'}}>
                         <Col>
-                        <Button href="#categories" className="d-flex align-items-center" style={{borderRadius: '50px', backgroundColor: '#198bff', height: '30px', }}>
+                        <Button href="#brandpackage" className="d-flex align-items-center" style={{borderRadius: '50px', backgroundColor: '#198bff', height: '30px', }}>
                             Get Started
                         </Button>
                         </Col>

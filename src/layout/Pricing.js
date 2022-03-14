@@ -23,7 +23,8 @@ export default function Pricing() {
             'Promotional flyers',
             'Business cards',
             'Thank you cards',
-          ]
+          ],
+          image: '/images/logo.jpg'
         },
         {
           id: 2,
@@ -37,7 +38,8 @@ export default function Pricing() {
             'Standard Website',
             'Social Media content templates',
             'Business cards',
-          ]
+          ],
+          image: '/images/logo.jpg'
         }
       ]
 
@@ -57,7 +59,7 @@ export default function Pricing() {
                     marketing activities.
                 </p>
             </div>
-            <div>
+            <div id="brandpackage">
                 <Packages packages={packages}/>
                 {/* <Row className='justify-content-center'>
                 <Col xs={10} sm="6" md="4" className="offset-md-1 offset-sm-0" style={{ marginBottom: '20px'}}>
