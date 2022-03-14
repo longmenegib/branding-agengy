@@ -1,14 +1,15 @@
 
 import { Container, Row, Col, Nav, NavItem, NavLink, List } from "reactstrap";
 import illus from '../../assets/illustration.png'
-import './footer.css'
+import './footer.css';
+import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
     <div style={{backgroundColor: '#198bff'}}>
       <Container className="w-100" style={{paddingTop: '50px'}}>
           <div style={{}}>
-              <img src={illus} width="50px" height="50px" alt=""/>  
+              <img src={logo} width="50px" height="50px" alt=""/>  
               <span style={{color: 'white', fontWeight: 'bold', fontSize: 'x-large'}}>Branding Agengy</span>
           </div>
           <div style={{marginTop: '20px', color: 'white'}}>
