@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Row, Col, Button} from 'reactstrap'
-import illus from '../assets/illustration.png'
+import illus from '../assets/slide.jpg'
 
 export default function SlideLayout() {
   return (
